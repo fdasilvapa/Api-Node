@@ -20,7 +20,7 @@ router.post('/cadastro', async (req, res) => {
                 password: hashPassword,
             },
         })
-        res.status(201).json(user)
+        res.status(201).json(user.name + " cadastrado com sucesso.")
     }
     catch(err){
         res.status(500).json({message: "Erro no servidor, tente novamente."})
